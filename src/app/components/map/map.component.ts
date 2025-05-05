@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './map.component.scss'
 })
 export class MapComponent {
-
+  latitude = -31.4018909;
+  longitude =-64.229748;
 }

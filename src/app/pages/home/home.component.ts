@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CountdownComponent } from "../../components/countdown/countdown.component";
 import { HeaderComponent } from "../../components/header/header.component";
 import { CarouselComponent } from "../../components/carousel/carousel.component";
-import { MapComponent } from "../../components/map/map.component";
+import { MapComponent} from "../../components/map/map.component";
 import { FormComponent } from "../../components/form/form.component";
 
 @Component({
