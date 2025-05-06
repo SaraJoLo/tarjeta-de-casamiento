@@ -1,0 +1,130 @@
+:host {
+    display: block;
+    font-family: 'Work Sans', sans-serif;
+    background-color: #f9f7f3; // marfil
+    padding: 2rem 1rem;
+    color: #3c3c3c;
+  }
+  
+  .rsvp-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #8a4f32; // terracota
+      border-bottom: 1px solid #decbb7;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2d8ce;
+  
+    @media (max-width: 600px) {
+      padding: 1.5rem 1rem;
+    }
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #5b6c6e; // azul acero
+    }
+  
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #d9d9d9;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #fafafa;
+  
+      &:focus {
+        outline: none;
+        border-color: #aec6cf; // polvo celeste
+        box-shadow: 0 0 0 2px rgba(174, 198, 207, 0.3);
+      }
+    }
+  
+    textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+  
+    input[type='checkbox'] {
+      width: auto;
+      margin-right: 0.5rem;
+    }
+  }
+  
+  .info-text {
+    font-size: 0.9rem;
+    color: #7d7d7d;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+  
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, #decbb7, #c1b1a0); // cobre suave
+    margin: 2rem 0;
+  }
+  
+  button[type='submit'] {
+    background: linear-gradient(to right, #bfa07a, #d9b48f); // dorado suave
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  
+    &:hover {
+      background: linear-gradient(to right, #a88361, #cfa577);
+    }
+  
+    &:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rsvp-title h2 {
+      font-size: 1.5rem;
+    }
+  
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-size: 0.95rem;
+      padding: 0.6rem;
+    }
+  
+    button[type='submit'] {
+      font-size: 0.95rem;
+      padding: 0.6rem 1.5rem;
+    }
+  }
+  

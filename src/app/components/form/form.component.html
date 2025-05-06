@@ -1,1 +1,55 @@
-<p>form works!</p>
+<div class="rsvp-title">
+    <h2>CONFIRMA TU ASISTENCIA</h2>
+  </div>
+  
+  <section id="rsvpForm">
+    <form [formGroup]="rsvpForm" (ngSubmit)="sendRsvp($event)">
+      <div class="form-group">
+        <label for="nombre">Nombre y Apellido</label>
+        <input type="text" id="nombre" formControlName="nombre" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="nombrePareja">Pareja*</label>
+        <input type="text" id="nombrePareja" formControlName="nombrePareja" />
+      </div>
+  
+      <p class="info-text">
+        *Nos encantaría invitar a todos los integrantes de la familia y amigos. Pero esta fiesta es limitada a mayores de 18 años.
+        Si tenés alguna duda sobre tu invitación, no dudes en contactarnos.
+      </p>
+  
+      <div class="divider"></div>
+  
+      <div class="form-group">
+        <label>
+          <input type="checkbox" formControlName="confirmacion" />
+          Confirmo mi asistencia
+        </label>
+      </div>
+  
+      <div class="form-group">
+        <label for="alimentacion">Requisitos alimentarios</label>
+        <select id="alimentacion" formControlName="alimentacion" required>
+          <option value="ninguno">Ninguno</option>
+          <option value="intolerancias">Intolerancias</option>
+          <option value="alergias">Alergias</option>
+          <option value="dietaEspecial">Dieta especial</option>
+        </select>
+        <textarea formControlName="comentariosAlimentacion" placeholder="Comentarios adicionales"></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="cancion">¿Querés mandarnos alguna canción para la fiesta?</label>
+        <input type="text" id="cancion" formControlName="cancion" />
+      </div>
+  
+      <div class="form-group">
+        <label for="mail">¿Querés recibir confirmación por email?</label>
+        <input type="email" id="mail" placeholder="Escribí tu correo" formControlName="mail" required />
+      </div>
+  
+      <button type="submit" [disabled]="rsvpForm.invalid">Enviar Confirmación</button>
+    </form>
+  </section>
+  

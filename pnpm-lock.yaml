@@ -29,6 +29,9 @@ dependencies:
   '@angular/router':
     specifier: ^18.2.0
     version: 18.2.13(@angular/common@18.2.13)(@angular/core@18.2.13)(@angular/platform-browser@18.2.13)(rxjs@7.8.2)
+  '@emailjs/browser':
+    specifier: ^4.4.1
+    version: 4.4.1
   rxjs:
     specifier: ~7.8.0
     version: 7.8.2
@@ -1667,6 +1670,11 @@ packages:
     resolution: {integrity: sha512-boghen8F0Q8D+0/Q1/1r6DUEieUJ8w2a1gIknExMSHBsJFOr2+0KUfHiVYBvucPwl3+RU5PFBK833FjFCh3BhA==}
     engines: {node: '>=14.17.0'}
     dev: true
+
+  /@emailjs/browser@4.4.1:
+    resolution: {integrity: sha512-DGSlP9sPvyFba3to2A50kDtZ+pXVp/0rhmqs2LmbMS3I5J8FSOgLwzY2Xb4qfKlOVHh29EAutLYwe5yuEZmEFg==}
+    engines: {node: '>=14.0.0'}
+    dev: false
 
   /@esbuild/aix-ppc64@0.21.5:
     resolution: {integrity: sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==}
