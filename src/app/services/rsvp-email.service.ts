@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { environment } from '../../enviroments/enviroment';
 
 @Injectable({
   providedIn: 'root'
 })
-
 export class RsvpEmailService {
-  private serviceID = 'service_yl271ph';
-  private templateID = 'template_rsvp_boda';
-  private publicKey = 'Wovzm0AAoLwjrpfBO';
-
   sendRsvpEmail(formData: any): Promise<EmailJSResponseStatus> {
-    return emailjs.send(this.serviceID, this.templateID, formData, this.publicKey);
+    const serviceID = environment.emailjs.serviceID;
+    const templateID = environment.emailjs.templateID;
+    const publicKey = environment.emailjs.publicKey;
+    
+    return emailjs.send(serviceID, templateID, formData, publicKey);
   }
 }
