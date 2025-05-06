@@ -1,6 +1,6 @@
 <header class="header">
     <div class="logo">
-      <a href="#" (click)="navigateTo('landing-page')">
+      <a href="#home" (click)="closeMenu()">
         <img src="/assets/icon/freepik__love_wedding.ico" alt="Logo del Casamiento">
       </a>
     </div>
@@ -12,10 +12,10 @@
     </div>
   
     <nav class="nav-links" [class.active]="isMenuOpen">
-      <a href="#" (click)="navigateTo('home')">Inicio</a>
-      <a href="#" (click)="navigateTo('palabras')">Y un día...</a>
-      <a href="#" (click)="navigateTo('lugar')">¿Dónde y Cuándo?</a>
-      <a href="#" (click)="navigateTo('rsvp-pag')">MI TARJETA</a>
+      <a href="#home" (click)="closeMenu()">Inicio</a>
+      <a href="#palabras" (click)="closeMenu()">Y un día...</a>
+      <a href="#lugar" (click)="closeMenu()">¿Dónde y Cuándo?</a>
+      <a href="#rsvp-pag" (click)="closeMenu()">MI TARJETA</a>
     </nav>
   </header>
   
