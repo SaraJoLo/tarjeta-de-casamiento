@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -17,10 +18,9 @@ export class HeaderComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  navigateTo(route: string): void {
-    this.isMenuOpen = false; 
-    console.log(`Navegando a ${route}`);
-    
+  closeMenu(): void {
+    this.isMenuOpen = false;
   }
+  
 }
 
