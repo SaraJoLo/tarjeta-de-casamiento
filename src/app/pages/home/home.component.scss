@@ -1,5 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
 
+@font-face {
+  font-family: 'Bellefair-Regular';
+  src: url('/assets/fonts/Bellefair-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'WorkSans-Regular';
+  src: url('/assets/fonts/WorkSans-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'WorkSans-Bold';
+  src: url('/assets/fonts/WorkSans-Bold.otf') format('opentype');
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,17 +25,17 @@ body {
   color: #333;
 }
 
-h1, h2 {
-  font-weight: 600;
-}
-
 h1 {
+  font-family: 'Bellefair-Regular';
   font-size: 4rem;
-  color: #d17c52;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 4px 4px 3px rgb(0, 0, 0);
 }
 
 h2 {
-  font-size: 2rem;
+  font-family: 'WorkSans-Regular';
+  font-size: 2.5rem;
   color: #52717a;
 }
 
@@ -32,7 +45,8 @@ section {
 }
 
 #home {
-  background: url("/assets/img/foundimg.jpg");
+  background: url("/assets/img/img8.jpg");
+  background-color: rgba(0, 0, 0, 0.9);
   background-size: cover;
   background-position: center;
   color: white;
@@ -41,44 +55,75 @@ section {
 
 #home .landing-title {
   margin-top: 50px;
+  z-index: 1;
+  
 }
 
 #home h1 {
   font-size: 4rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 3;
 }
 
 #home h2 {
-  font-size: 2.2rem;
+  font-family: 'WorkSans-Regular';
+  font-size: 1.2rem;
+  color: #52717a;
+  text-shadow: 4px 4px 3px rgb(255, 255, 255);
   margin-top: 10px;
   font-weight: 400;
 }
 
 #save {
   margin-top: 20px;
-  padding: 15px 25px;
+  padding: 15px 30px;
   font-size: 1.2rem;
-  background-color: #d17c52; /* Terracota */
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: #B4282C;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  box-shadow: 0 5px 15px rgba(209, 124, 82, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#save::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease;
 }
 
 #save:hover {
-  background-color: #b5633f; /* Cobre quemado */
+  background-color: #C35722;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(209, 124, 82, 0.6);
+}
+
+#save:hover::after {
+  left: 100%;
 }
 
 #palabras, #lugar, #rsvp-pag {
   background-color: #fff9f4; /* Marfil / Blanco cálido */
   border-radius: 8px;
   margin: 20px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 #palabras h2, #lugar h2 {
-  color: #52717a; /* Azul acero / Polvo celeste */
+  font-family: 'Bellefair-Regular';
+  color: #52717a;
+  font-size: 2rem;
+  font-weight: 800;
 }
 
 #lugar p {
@@ -92,7 +137,7 @@ section {
 }
 
 #rsvp-pag {
-  background-color: #e2ebf0; /* Verde salvia / Eucalipto */
+  background-color: #ffffff; /* Verde salvia / Eucalipto */
   padding: 3rem 2rem;
   border-radius: 8px;
 }
@@ -118,7 +163,7 @@ app-carousel, app-map, app-form {
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   section {

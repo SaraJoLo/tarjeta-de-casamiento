@@ -41,7 +41,7 @@
       display: block;
       font-weight: 500;
       margin-bottom: 0.5rem;
-      color: #5b6c6e; // azul acero
+      color: #5b6c6e;
     }
   
     input,
@@ -74,7 +74,7 @@
   
   .info-text {
     font-size: 0.9rem;
-    color: #7d7d7d;
+    color: #4a4949;
     margin-bottom: 1.5rem;
     font-style: italic;
   }
@@ -124,7 +124,9 @@
   
     button[type='submit'] {
       font-size: 0.95rem;
+      background-color: #8a4f32;
       padding: 0.6rem 1.5rem;
+      gap: 0.5rem;
     }
   }
   
