@@ -24,19 +24,24 @@ body {
   background-color: #f6f6f6; 
   color: #333;
 }
-
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, #decbb7, #c1b1a0); // cobre suave
+  margin: 1rem 0;
+}
 h1 {
   font-family: 'Bellefair-Regular';
   font-size: 4rem;
-  color: #ffffff;
+  color: #76876E;
   font-weight: 600;
-  text-shadow: 4px 4px 3px rgb(0, 0, 0);
+  text-shadow: 4px 4px 3px rgb(179, 75, 18);
 }
 
 h2 {
   font-family: 'WorkSans-Regular';
   font-size: 2.5rem;
   color: #52717a;
+  font-weight: 600;
 }
 
 section {
@@ -45,12 +50,11 @@ section {
 }
 
 #home {
-  background: url("/assets/img/img8.jpg");
-  background-color: rgba(0, 0, 0, 0.9);
+  background: url("/assets/img/fondo0.png") no-repeat center center;
+  background-color: #FFF9F4;
   background-size: cover;
   background-position: center;
   color: white;
-  padding-top: 8rem;
 }
 
 #home .landing-title {
@@ -60,6 +64,7 @@ section {
 }
 
 #home h1 {
+  padding-top: 3rem;
   font-size: 4rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 3;
@@ -69,7 +74,6 @@ section {
   font-family: 'WorkSans-Regular';
   font-size: 1.2rem;
   color: #52717a;
-  text-shadow: 4px 4px 3px rgb(255, 255, 255);
   margin-top: 10px;
   font-weight: 400;
 }
@@ -80,7 +84,7 @@ section {
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
-  background-color: #B4282C;
+  background-color:  #7e4a35;
   color: white;
   border: none;
   border-radius: 8px;
@@ -115,7 +119,6 @@ section {
 #palabras, #lugar, #rsvp-pag {
   background-color: #fff9f4; /* Marfil / Blanco cálido */
   border-radius: 8px;
-  margin: 20px 0;
   box-shadow: none;
 }
 
@@ -138,8 +141,9 @@ section {
 
 #rsvp-pag {
   background-color: #ffffff; /* Verde salvia / Eucalipto */
-  padding: 3rem 2rem;
+  padding: 0rem 2rem;
   border-radius: 8px;
+  overflow: visible;
 }
 
 button#save {
@@ -149,15 +153,24 @@ button#save {
 
 app-countdown {
   margin-top: 20px;
-  color: #d17c52; /* Terracota */
+  color: #d17c52; 
 }
-
-app-carousel, app-map, app-form {
+app-form{
+  display: block;
+  min-height: 100%;
+}
+app-carousel, app-map {
   margin-top: 40px;
+  padding-bottom: 3rem;
 }
 
-/* Responsividad */
 @media screen and (max-width: 768px) {
+  #home {
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    background-position: center top; /* opcional si la imagen se recorta feo */
+  }
+
   h1 {
     font-size: 2.5rem;
   }
@@ -181,5 +194,6 @@ app-carousel, app-map, app-form {
 
   app-countdown, app-carousel, app-map, app-form {
     margin-top: 30px;
+    height: auto;
   }
 }
