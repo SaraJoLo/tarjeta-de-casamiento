@@ -28,8 +28,10 @@
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     border: 1px solid #e2d8ce;
+    padding-bottom: 4rem;
   
     @media (max-width: 600px) {
+      padding-bottom: 5rem;
       padding: 1.5rem 1rem;
     }
   }
@@ -56,7 +58,7 @@
   
       &:focus {
         outline: none;
-        border-color: #aec6cf; // polvo celeste
+        border-color: #aec6cf;
         box-shadow: 0 0 0 2px rgba(174, 198, 207, 0.3);
       }
     }
