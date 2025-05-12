@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-tarjeta-casamiento/browser",
+            "outputPath": "dist/angular-tarjeta-casamiento",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
