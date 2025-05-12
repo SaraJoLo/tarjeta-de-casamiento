@@ -50,11 +50,11 @@ section {
 }
 
 #home {
-  background: url("/assets/img/fondo0.png") no-repeat center center;
+  background: url("/assets/fondo/fondofondo1.png") ;
   background-color: #FFF9F4;
   background-size: cover;
   background-position: center;
-  color: white;
+  z-index: -2;
 }
 
 #home .landing-title {
