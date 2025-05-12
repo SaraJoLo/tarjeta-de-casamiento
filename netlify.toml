@@ -1,3 +1,8 @@
+[build]
+  command = "ng build --configuration production"
+  publish = "dist/angular-tarjeta-casamiento"
+
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
