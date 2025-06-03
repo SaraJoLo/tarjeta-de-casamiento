@@ -1,31 +1,45 @@
-<app-header></app-header>
-<section id="home">
-  <audio autoplay loop id="audioPlayer">
-    <source src="assets/songs/reiksong.mp3" type="audio/mp3" />
-  </audio>
-  <div class="landing-title">
-    <h1>BLAN & FABRI</h1>
-    <h2>¡NOS CASAMOS!
-      <br>
-       - 05 / 09 / 2025 -
-         <br>
-       - 21:00 hs - </h2>
+
+  <div *ngIf="!accesoPermitido && !yaIntento" class="codigo-acceso">
+    <h2>Ingresá tu código de acceso</h2>
+    <input [(ngModel)]="accessCodeIngresado" placeholder="Código" />
+    <button (click)="verificarCodigo()">Ingresar código</button>
   </div>
-  <div class="divider"></div>
-   <app-countdown></app-countdown>
-   <button id="save" (click)="saveTheDate()">AGENDAR EN CALENDARIO</button>
-</section>
 
-<section id="palabras">
+  <div *ngIf="yaIntento && !accesoPermitido" class="codigo-error">
+    <p>Nos gustaría informarte que cerramos nuestra lista de invitados.</p>
+    <br />
+    <p>Nos causó sorpresa no recibir tu confirmación pero comprendemos que a veces se complica.</p>
+    <br />
+    <p>¡Esperamos verte en otra ocación!</p>
+  </div>
+
+
+  
+<div *ngIf="accesoPermitido">
+  <app-header></app-header>
+  <section id="home">
+    <audio autoplay loop #audioPlayer>
+      <source src="assets/songs/reiksong.mp3" type="audio/mp3" />
+    </audio>
+    <div class="landing-title">
+      <h1>BLAN & FABRI</h1>
+      <h2>¡NOS CASAMOS!<br />- 05 / 09 / 2025 -<br />- 21:00 hs -</h2>
+    </div>
+    <div class="divider"></div>
+    <app-countdown></app-countdown>
+    <button id="save" (click)="saveTheDate()">AGENDAR EN CALENDARIO</button>
+  </section>
+
+  <section id="palabras">
     <app-carousel></app-carousel>
-</section>
+  </section>
 
-<section id="lugar">
-  <h2>¿DÓNDE SERÁ?</h2>
-  <app-map></app-map>
-  <p>Habrá estacionamiento disponible en la entrada del lugar.</p>
-</section>
+  <section id="lugar">
+    <h2>¿DÓNDE SERÁ?</h2>
+    <app-map></app-map>
+    <p>Habrá estacionamiento disponible en la entrada del lugar.</p>
+  </section>
 
-<section id="rsvp-pag">
-  <app-form></app-form>
-</section>
+  <section id="rsvp-pag">
+    <app-form></app-form>
+  </section>

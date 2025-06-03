@@ -18,6 +18,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+.codigo-acceso,
+.codigo-error {
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Bellefair', serif;
+  color: #333;
+}
+
+.codigo-acceso input {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.codigo-acceso button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 
 body {
   font-family: 'Work Sans', sans-serif;
