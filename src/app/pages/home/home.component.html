@@ -1,21 +1,4 @@
-
-  <div *ngIf="!accesoPermitido && !yaIntento" class="codigo-acceso">
-    <h2>Ingresá tu código de acceso</h2>
-    <input [(ngModel)]="accessCodeIngresado" placeholder="Código" />
-    <button (click)="verificarCodigo()">Ingresar código</button>
-  </div>
-
-  <div *ngIf="yaIntento && !accesoPermitido" class="codigo-error">
-    <p>Nos gustaría informarte que cerramos nuestra lista de invitados.</p>
-    <br />
-    <p>Nos causó sorpresa no recibir tu confirmación pero comprendemos que a veces se complica.</p>
-    <br />
-    <p>¡Esperamos verte en otra ocación!</p>
-  </div>
-
-
-  
-<div *ngIf="accesoPermitido">
+<div>
   <app-header></app-header>
   <section id="home">
     <audio autoplay loop #audioPlayer>
