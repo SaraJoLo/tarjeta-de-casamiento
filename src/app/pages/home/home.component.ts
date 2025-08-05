@@ -24,7 +24,6 @@ import { FormsModule } from '@angular/forms';
     CarouselComponent,
     MapComponent,
     FormComponent,
-    NgIf,
     FormsModule
   ],
   templateUrl: './home.component.html',
