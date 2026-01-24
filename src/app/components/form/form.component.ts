@@ -1,65 +1,56 @@
-import { Component, OnInit, inject } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  Validators,
-  ReactiveFormsModule,
-} from '@angular/forms';
-import { RsvpEmailService } from '../../services/rsvp-email.service';
-import { Router } from '@angular/router';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
+import { RsvpEmailService } from '../../services/rsvp-email.service';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss'
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
   private fb = inject(FormBuilder);
-  private router = inject(Router);
   private emailService = inject(RsvpEmailService);
 
-  rsvpForm!: FormGroup;
+  enviado = false;
+  error = false;
+  enviando = false;
 
-  ngOnInit(): void {
-    this.rsvpForm = this.fb.group({
-      nombre: ['', Validators.required],
-      nombrePareja: [''],
-      confirmacion: [false],
-      alimentacion: ['', Validators.required],
-      comentariosAlimentacion: [''],
-      cancion: [''],
-      mail: ['', [Validators.required, Validators.email]],
-    });
-  }
+  rsvpForm = this.fb.group({
+    nombre: ['', Validators.required],
+    confirmacion: [false],
+    alimentacion: ['', Validators.required],
+    comentariosAlimentacion: [''],
+    cancion: [''],
+    mail: ['', [Validators.required, Validators.email]],
+  });
 
-  sendRsvp(event: Event): void {
-    event.preventDefault();
-
+  sendRsvp() {
     if (this.rsvpForm.invalid) {
-      alert('Por favor, completa los campos requeridos correctamente.');
+      this.rsvpForm.markAllAsTouched();
       return;
     }
 
-    const formData = {
+    this.enviando = true;
+
+    const data = {
       ...this.rsvpForm.value,
       confirmacion: this.rsvpForm.value.confirmacion ? 'Sí' : 'No',
       to_email: this.rsvpForm.value.mail,
-      tiempo: new Date().toLocaleString('es-AR', {
-        dateStyle: 'short',
-        timeStyle: 'short'
-      }),
+      tiempo: new Date().toLocaleString('es-AR'),
     };
 
-    this.emailService.sendRsvpEmail(formData).then(() => {
-      alert('¡Gracias por confirmar! Te esperamos 💕');
-      this.rsvpForm.reset();
-      this.router.navigate([], { fragment: 'presents' });
-    }).catch((error) => {
-      console.error('Error al enviar el formulario:', error);
-      alert('Hubo un problema al enviar el formulario. Intentá más tarde.');
-    });
+    this.emailService.sendRsvpEmail(data)
+      .then(() => {
+        this.enviado = true;
+        this.enviando = false;
+        this.rsvpForm.disable();
+      })
+      .catch(() => {
+        this.error = true;
+        this.enviando = false;
+      });
   }
 }

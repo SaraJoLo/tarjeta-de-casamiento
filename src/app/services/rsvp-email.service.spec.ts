@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { RsvpEmailService } from './rsvp-email.service';
 
 describe('RsvpEmailService', () => {

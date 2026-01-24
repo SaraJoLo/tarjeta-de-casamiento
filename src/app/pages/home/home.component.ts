@@ -8,8 +8,6 @@ import {
   AfterViewInit,
 } from '@angular/core';
 import { CountdownComponent } from "../../components/countdown/countdown.component";
-import { HeaderComponent } from "../../components/header/header.component";
-import { CarouselComponent } from "../../components/carousel/carousel.component";
 import { MapComponent } from "../../components/map/map.component";
 import { FormComponent } from "../../components/form/form.component";
 import { NgIf } from '@angular/common';
@@ -20,8 +18,6 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [
     CountdownComponent,
-    HeaderComponent,
-    CarouselComponent,
     MapComponent,
     FormComponent,
     FormsModule
@@ -62,9 +58,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   saveTheDate() {
-    const title = encodeURIComponent('Casamiento Blan y Fabri');
-    const startDate = '20250905T233000Z';
-    const endDate = '20250906T020000Z';
+    const title = encodeURIComponent('15´Male');
+    const startDate = '20260411T233000Z';
+    const endDate = '20260411T020000Z';
     const details = encodeURIComponent(
       '¡Acompañanos a celebrar nuestro casamiento!\n' +
       'Ubicación: City Espacio Events\n' +

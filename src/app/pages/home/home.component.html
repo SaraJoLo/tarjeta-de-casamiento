@@ -1,61 +1,57 @@
 <div>
-  <app-header></app-header>
-
+  <!-- HERO / HOME -->
   <section class="home-section" id="home">
-    <audio autoplay loop #audioPlayer>
-      <source src="assets/songs/reiksong.mp3" type="audio/mp3" />
-    </audio>
-
-    <div class="landing-title">
-      <h1>BLAN & FABRI</h1>
-      <h2>¡NOS CASAMOS!<br />- 05 / 09 / 2025 -<br />- 21:30 hs -</h2>
+    <div class="hero-image">
+      <img
+        src="assets/fondo/1.png"
+        alt="15 de Male - Invitación"
+      />
     </div>
 
-    <div class="divider"></div>
-
-    <app-countdown></app-countdown>
-
-    <button class="btn-save-date" (click)="saveTheDate()">
-      AGENDAR EN CALENDARIO
-    </button>
+    <div class="hero-content">
+      <div class="divider"></div>
+      
+      <app-countdown></app-countdown>
+      
+      <button class="btn-save-date" (click)="saveTheDate()">
+        AGENDAR EN CALENDARIO
+      </button>
+    </div>
+    <img src="assets/fondo/2.png" alt="informativa">
   </section>
 
-  <section class="section-box palabras-section" id="palabras">
-    <app-carousel></app-carousel>
-  </section>
-
+  <!-- LUGAR -->
   <section class="section-box lugar-section" id="lugar">
     <h2>¿DÓNDE SERÁ?</h2>
     <app-map></app-map>
-    <p>Dean Funes 3750 - Habrá estacionamiento disponible en la entrada del lugar.</p>
+    <p>
+      Dean Funes 3750 – Habrá estacionamiento disponible en la entrada del lugar.
+    </p>
   </section>
 
+  <!-- RSVP -->
   <section class="section-box rsvp-section" id="rsvp-pag">
     <app-form></app-form>
   </section>
 
-  <section class="section-box dresscode-section" id="dresscode">
-    <h2>DRESS CODE</h2>
-    <p>
-      Formal. Sugerimos código de vestimenta elegante y formal<br />
-      Ni Blanco ni Negro<br />
-      Con la siguiente gama de colores:
-    </p>
-    <img src="assets/fondo/colores.jpg" alt="Colores sugeridos"  class="dresscodeimg" />
-    <br>
-    <p>¡Esperamos que te diviertas eligiendo tu atuendo!</p>
-  </section>
-
+  <!-- REGALO -->
   <section class="section-box regalo-section" id="regalo">
-    <h2>Queremos que seas parte de nuestro día especial 💕</h2>
+    <h2>Ya sos parte de este evento tan especial para mí 💕</h2>
+
     <p>
-      Tu presencia en nuestra boda 💕 será el mejor regalo que podemos recibir 🎁. Si quieres acompañarnos con un detalle , será un tesoro que haremos parte de nuestro nuevo hogar 🏠 y guardaremos con mucho cariño .
+      Tu presencia es el mejor regalo 🎁.  
+      Si además querés colaborar con dinero, lo voy a agradecer muchísimo.
     </p>
-    <h3> Detalles importantes</h3>
-    <li>
-      <a>Nuestro Alias para regalos es: Fabri.Blan.Amor </a>
-      <a>Banco Nación ⁠CA $ 15702131722703 </a>
-      <a> GRACIAS!! </a>
-    </li>
+
+    <h3>Detalles importantes</h3>
+
+    <ul>
+      <li><strong>Alias Prex: 30473551.PRE</strong></li>
+      <li>Titular: Noelia Carletto</li>
+      <li>Cuenta Prex: 20219127</li>
+      <li>CVU: 0000013000032202191277</li>
+    </ul>
+
+    <p><strong>¡GRACIAS! 💖</strong></p>
   </section>
 </div>

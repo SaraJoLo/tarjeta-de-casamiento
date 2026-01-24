@@ -1,8 +1,8 @@
-html {
-    scroll-behavior: smooth;
-  }
-body{
-  height: auto;
-  min-height: 100vh;
+html, body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 !important;
+  margin-left: 1rem;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }

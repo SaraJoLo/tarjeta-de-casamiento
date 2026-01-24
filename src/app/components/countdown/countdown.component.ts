@@ -13,16 +13,11 @@ import { Router } from '@angular/router';
 
 export class CountdownComponent implements OnInit, OnDestroy {
 
-  targetDate: Date = new Date('2025-09-05T21:30:00-03:00');
+  targetDate: Date = new Date('2026-04-11T21:00:00-05:00');
   intervalId: any;
 
   timeLeft = {
-    months: 0,
-    weeks: 0,
     days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
   };
 
   ngOnInit(): void {
@@ -40,7 +35,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
 
     if (totalSeconds <= 0) {
       clearInterval(this.intervalId);
-      this.timeLeft = { months: 0, weeks: 0, days: 0, hours: 0, minutes: 0, seconds: 0 };
+      this.timeLeft = {days: 0};
       return;
     }
 
@@ -48,9 +43,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
     const minutes = Math.floor(totalSeconds / 60) % 60;
     const hours = Math.floor(totalSeconds / 3600) % 24;
     const days = Math.floor(totalSeconds / 86400);
-    const weeks = Math.floor(days / 7);
-    const months = Math.floor(days / 30.44);
 
-    this.timeLeft = { months, weeks, days, hours, minutes, seconds };
+    this.timeLeft = { days };
   }
 }
